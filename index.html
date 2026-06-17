@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mónica Gómez Vesga — Customer Experience &amp; Content (EN/ES)</title>
+<meta name="description" content="Mónica Gómez Vesga — bilingual (ES/EN) customer experience & support specialist and content writer, based in Barcelona. Two portfolios: support and content." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F4F1EB;
+    --ink:#1C2B2A;
+    --mute:#6E6A60;
+    --line:#E4DED2;
+    --card:#FFFFFF;
+    --teal:#1C6B5E;
+    --teal-deep:#134B43;
+    --clay:#C0543B;
+    --clay-deep:#9E3F2B;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;
+  }
+  .sans{font-family:"Space Grotesk",system-ui,sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{width:100%;max-width:840px;margin:0 auto;padding:0 24px;}
+
+  main{flex:1;display:flex;align-items:center;padding:72px 0 56px;}
+
+  .kicker{font-family:"Space Grotesk",sans-serif;font-size:12.5px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--teal);}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.025em;
+    font-size:clamp(2.6rem,8vw,4.6rem);line-height:1.02;margin:.3em 0 .25em;}
+  .tagline{font-size:clamp(1.1rem,2.6vw,1.4rem);max-width:42ch;color:var(--ink);}
+  .tagline em{font-style:italic;color:var(--clay);}
+  .loc{font-family:"Space Grotesk",sans-serif;font-size:13.5px;color:var(--mute);
+    margin-top:18px;display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;}
+  .pip{width:5px;height:5px;border-radius:50%;background:var(--clay);display:inline-block;}
+
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px;}
+  @media(max-width:640px){.doors{grid-template-columns:1fr;}}
+
+  .door{display:block;background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:26px 26px 24px;position:relative;overflow:hidden;
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+  .door::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);}
+  .door:hover{transform:translateY(-3px);box-shadow:0 14px 30px -16px rgba(28,43,42,.35);border-color:var(--accent);}
+  .door .ey{font-family:"Space Grotesk",sans-serif;font-size:11.5px;font-weight:600;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--accent);}
+  .door h2{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.32rem;
+    letter-spacing:-.01em;margin:.55em 0 .35em;}
+  .door p{margin:0 0 18px;color:var(--ink);font-size:1.02rem;}
+  .door .go{font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:600;color:var(--accent);
+    display:inline-flex;align-items:center;gap:7px;}
+  .door .arrow{transition:transform .2s ease;}
+  .door:hover .arrow{transform:translateX(4px);}
+
+  .door.support{--accent:var(--teal);}
+  .door.content{--accent:var(--clay);}
+
+  footer{border-top:1px solid var(--line);padding:22px 0;}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    font-family:"Space Grotesk",sans-serif;font-size:13.5px;color:var(--mute);}
+  .foot a{color:var(--teal);font-weight:500;}
+  .foot a:hover{color:var(--clay);}
+  .foot .links{display:flex;gap:18px;}
+
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto;}
+    .door,.door .arrow{transition:none;}
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="wrap">
+      <span class="kicker">Bilingual · EN / ES · Barcelona</span>
+      <h1>Mónica Gómez Vesga</h1>
+      <p class="tagline">Customer-support specialist and writer. I care about the sentence <em>and</em> the person on the other end of it.</p>
+      <div class="loc">
+        <span>Remote, EU</span><span class="pip"></span>
+        <span>Open to customer experience &amp; content roles</span>
+      </div>
+
+      <div class="doors">
+        <a class="door support" href="customer-experience.html">
+          <span class="ey">For support &amp; CX roles</span>
+          <h2>Customer Experience &amp; Support</h2>
+          <p>Seven years of bilingual support, the systems that keep a team fast, and real writing samples.</p>
+          <span class="go">Enter <span class="arrow">→</span></span>
+        </a>
+        <a class="door content" href="https://monicagvesga.github.io/content-writing-portfolio/">
+          <span class="ey">For content &amp; SEO roles</span>
+          <h2>Content &amp; SEO Writing</h2>
+          <p>SEO and editorial content that ranks on Google and gets cited by AI search. Verified results.</p>
+          <span class="go">Enter <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© Mónica Gómez Vesga · Barcelona</span>
+      <span class="links">
+        <a href="mailto:mnca.gov@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/monicagomezvesga/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
