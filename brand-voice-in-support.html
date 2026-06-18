@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brand Voice in Customer Support · Mónica Gómez Vesga</title>
+<meta name="description" content="A practical guide to finding a brand's voice and matching it to how the customer will read it. Real scenarios, professional replies, interactive cheat sheet. By Mónica Gómez Vesga." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F3EFE7; --ink:#1B2A29; --mute:#6E6A60; --line:#E4DDCF; --card:#FFFFFF;
+    --teal:#1C6B5E; --teal-deep:#123F39; --clay:#C0543B; --clay-deep:#9E3F2B;
+    --tint:#ECF3EF; --tint2:#EDE7DA; --blush:#F6E9E2;
+    --maxw:940px;
+    --shadow:0 18px 40px -24px rgba(20,40,38,.55);
+    --shadow-sm:0 8px 22px -16px rgba(20,40,38,.5);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;
+    font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  a{color:var(--teal);text-decoration:none;} a:hover{color:var(--clay);}
+  h1,h2,h3,.eyebrow,.sans,nav,.btn,.seg button,label,.dial-ends,.vhead,.note-k,.scen-tab{font-family:"Space Grotesk",system-ui,sans-serif;}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(243,239,231,.9);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  .brand{font-weight:600;font-size:14.5px;color:var(--ink);}
+  .nav-inner a.back{font-size:13.5px;font-weight:500;color:var(--mute);}
+  .nav-inner a.back:hover{color:var(--ink);}
+
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(120% 140% at 88% -10%, #E7F0EB 0%, rgba(231,240,235,0) 55%),
+      radial-gradient(90% 120% at 100% 0%, #F6E9E2 0%, rgba(246,233,226,0) 45%);
+    border-bottom:1px solid var(--line);}
+  .hero-svg{position:absolute;top:-30px;right:-40px;width:340px;opacity:.5;pointer-events:none;}
+  .hero .wrap{position:relative;padding:74px 24px 46px;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.022em;line-height:1.03;
+    font-size:clamp(2.3rem,6vw,3.8rem);margin:.34em 0 .3em;max-width:16ch;}
+  h1 em{font-style:italic;font-family:"Newsreader",serif;color:var(--clay);font-weight:500;}
+  .lede{font-size:clamp(1.08rem,2.2vw,1.3rem);max-width:50ch;color:var(--ink);}
+  .freebadge{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:600;
+    color:var(--teal-deep);background:#fff;border:1px solid #D7E6DD;border-radius:999px;padding:6px 14px;margin-top:20px;box-shadow:var(--shadow-sm);}
+
+  section{padding:46px 0;}
+  .band{background:var(--tint2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:20px;}
+  .sec-head .num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;
+    background:var(--teal);color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14px;margin-bottom:12px;box-shadow:var(--shadow-sm);}
+  .sec-head h2{font-weight:600;font-size:clamp(1.55rem,3.6vw,2.15rem);letter-spacing:-.015em;margin:.05em 0 .2em;}
+  .sec-head p{color:var(--mute);max-width:62ch;margin:.2em 0 0;}
+  p.body{max-width:64ch;}
+
+  .info{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;margin-top:8px;box-shadow:var(--shadow-sm);}
+  .info svg{width:100%;height:auto;display:block;}
+
+  .pull{margin:0;padding:40px 0;}
+  .pull blockquote{margin:0;max-width:21ch;font-family:"Newsreader",serif;font-weight:500;font-style:italic;
+    font-size:clamp(1.7rem,4.6vw,2.7rem);line-height:1.18;color:var(--teal-deep);letter-spacing:-.01em;}
+  .pull blockquote span{color:var(--clay);}
+  .pull .by{font-family:"Space Grotesk",sans-serif;font-size:13px;color:var(--mute);margin-top:18px;max-width:56ch;line-height:1.6;}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow);}
+  .dial{margin:0 0 22px;}
+  .dial label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+  .dial-ends{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mute);margin-top:6px;}
+  input[type=range]{width:100%;accent-color:var(--teal);}
+  .seg{display:flex;gap:8px;flex-wrap:wrap;}
+  .seg button{font-size:13px;font-weight:500;color:var(--ink);border:1px solid var(--line);background:#FBF9F4;
+    border-radius:999px;padding:7px 15px;cursor:pointer;transition:.15s;}
+  .seg button:hover{border-color:var(--teal);}
+  .seg button.on{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .words{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.words{grid-template-columns:1fr;}}
+  .words input{width:100%;font-family:"Newsreader",serif;font-size:15px;padding:11px 13px;border:1px solid var(--line);
+    border-radius:11px;background:#FBF9F4;color:var(--ink);}
+  .words input:focus{outline:none;border-color:var(--teal);background:#fff;}
+  .btn{font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:600;padding:12px 22px;border-radius:999px;
+    border:none;background:var(--teal);color:#fff;cursor:pointer;transition:.15s;margin-top:8px;box-shadow:var(--shadow-sm);}
+  .btn:hover{background:var(--teal-deep);}
+  .btn.done{background:var(--clay);}
+
+  .scen-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px;}
+  .scen-tab{font-size:13.5px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;
+    border-radius:12px;padding:10px 16px;cursor:pointer;transition:.15s;box-shadow:var(--shadow-sm);}
+  .scen-tab:hover{border-color:var(--teal);}
+  .scen-tab.active{background:var(--ink);border-color:var(--ink);color:#fff;}
+  .custmsg{background:#fff;border:1px solid var(--line);border-left:4px solid var(--clay);border-radius:14px;
+    padding:16px 20px;margin-bottom:20px;font-size:1.06rem;box-shadow:var(--shadow-sm);}
+  .custmsg b{font-family:"Space Grotesk",sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--clay);display:block;margin-bottom:5px;}
+  .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:720px){.vgrid{grid-template-columns:1fr;}}
+  .vcard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;}
+  .vhead{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;padding:11px 18px;}
+  .vcard.warm .vhead{background:var(--clay);}
+  .vcard.premium .vhead{background:var(--teal-deep);}
+  .vbody{padding:18px 20px 20px;font-size:1.02rem;line-height:1.6;}
+  .vbody v{color:var(--clay);font-style:normal;font-family:"Space Grotesk",sans-serif;font-size:.9em;}
+  .vcard.premium .vbody v{color:var(--teal-deep);}
+  .note-k{margin-top:20px;background:var(--blush);border:1px solid #E7D3C8;border-radius:14px;padding:16px 20px;
+    font-family:"Newsreader",serif;font-size:1.02rem;color:var(--ink);}
+  .note-k b{font-family:"Space Grotesk",sans-serif;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--clay-deep);display:block;margin-bottom:6px;}
+
+  .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px;}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr;}}
+  .st{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:var(--shadow-sm);}
+  .st .n{width:30px;height:30px;border-radius:50%;background:var(--clay);color:#fff;font-family:"Space Grotesk",sans-serif;
+    font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .st h3{font-family:"Space Grotesk",sans-serif;font-size:1.04rem;margin:0 0 .35em;}
+  .st p{margin:0;font-size:.95rem;}
+  @media(max-width:680px){.steps3{grid-template-columns:1fr;}}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--mute);
+    font-family:"Space Grotesk",sans-serif;font-size:13px;}
+  footer a{color:var(--teal);}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+  <span class="brand">Mónica Gómez Vesga</span>
+  <a class="back" href="index.html">← Back to portfolio</a>
+</div></header>
+
+<main>
+  <section class="hero">
+    <svg class="hero-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="40" y="60" width="180" height="110" rx="22" fill="#1C6B5E" opacity=".16"/>
+      <rect x="90" y="120" width="180" height="110" rx="22" fill="#C0543B" opacity=".16"/>
+      <path d="M70 170 l-18 26 l34 -10 z" fill="#1C6B5E" opacity=".16"/>
+    </svg>
+    <div class="wrap">
+      <span class="eyebrow">Free resource · Customer support</span>
+      <h1>Brand voice that's read <em>the way you meant it</em>.</h1>
+      <p class="lede">Every reply your team sends is the brand talking. This guide is how I find a brand's voice and, just as important, match it to how the customer will actually read it.</p>
+      <span class="freebadge">Free to use · by Mónica Gómez Vesga</span>
+    </div>
+  </section>
+
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">1</span><h2>The inbox is the brand</h2></div>
+    <p class="body">A customer rarely meets your marketing team. They meet your support inbox, usually on a day when something went wrong. So for them, the voice in that reply <em>is</em> the brand. Brand voice in support isn't slang or jokes. It's the consistent set of choices in how you write: how warm or formal you are, how much energy you bring, the words you reach for and the ones you avoid.</p>
+    <div class="info">
+      <svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Customers feel the brand most through support">
+        <defs><style>
+          .t{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#1B2A29;}
+          .s{font-family:'Space Grotesk',sans-serif;font-size:11.5px;fill:#6E6A60;}
+        </style></defs>
+        <circle cx="110" cy="88" r="40" fill="#ECF3EF" stroke="#CFE2D9"/>
+        <text x="110" y="84" text-anchor="middle" class="t">Customer</text>
+        <text x="110" y="100" text-anchor="middle" class="s">something went wrong</text>
+        <path d="M152 70 C 230 50, 250 50, 300 52" stroke="#D8CFBE" stroke-width="1.6" fill="none" stroke-dasharray="5 5"/>
+        <path d="M152 108 C 230 124, 250 124, 300 122" stroke="#1C6B5E" stroke-width="3" fill="none"/>
+        <rect x="304" y="34" width="210" height="40" rx="11" fill="#fff" stroke="#E4DDCF"/>
+        <text x="322" y="52" class="t" fill="#9A968C">Marketing</text><text x="322" y="68" class="s">glimpsed now and then</text>
+        <rect x="304" y="100" width="210" height="46" rx="11" fill="#ECF3EF" stroke="#CFE2D9"/>
+        <text x="322" y="120" class="t" fill="#123F39">Support inbox</text><text x="322" y="137" class="s">where the brand is truly felt</text>
+        <text x="556" y="118" class="t" fill="#123F39">This is your voice.</text>
+        <text x="556" y="137" class="s">Make it count.</text>
+      </svg>
+    </div>
+  </div></section>
+
+  <div class="band"><div class="wrap pull">
+    <blockquote>Read the room <span>before</span> you pick a voice.</blockquote>
+    <p class="by">The same words can comfort one customer and insult another. A person who is upset reads a joke as mockery. So the first question is never &ldquo;what's our brand voice?&rdquo; It's &ldquo;how is this person feeling right now?&rdquo; Then you choose how much of the voice to bring.</p>
+  </div></div>
+
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">2</span><h2>Capture the voice fast</h2>
+      <p>Set these six dials for any brand or project and you have a cheat sheet the whole team can follow. Try it, then copy your result.</p></div>
+    <div class="panel">
+      <div class="dial"><label>Formality</label>
+        <input type="range" min="0" max="100" value="40" id="d-form">
+        <div class="dial-ends"><span>Casual &ldquo;Hey!&rdquo;</span><span>Formal &ldquo;Dear&hellip;&rdquo;</span></div></div>
+      <div class="dial"><label>Warmth</label>
+        <input type="range" min="0" max="100" value="70" id="d-warm">
+        <div class="dial-ends"><span>Efficient, neutral</span><span>Friendly, personal</span></div></div>
+      <div class="dial"><label>Energy</label>
+        <input type="range" min="0" max="100" value="45" id="d-energy">
+        <div class="dial-ends"><span>Calm, reassuring</span><span>Upbeat, lively</span></div></div>
+      <div class="dial"><label>Humor</label>
+        <div class="seg" data-name="humor"><button class="on">None</button><button>Light</button><button>Playful</button></div></div>
+      <div class="dial"><label>Emoji</label>
+        <div class="seg" data-name="emoji"><button class="on">Never</button><button>Sparingly</button><button>Yes</button></div></div>
+      <div class="dial words">
+        <div><label>Words we use</label><input id="w-use" placeholder="e.g. happy to help, let's fix this, no problem"></div>
+        <div><label>Words we avoid</label><input id="w-avoid" placeholder="e.g. unfortunately, as per, kindly note"></div></div>
+      <button class="btn" id="copyCheat">Copy my cheat sheet</button>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">3</span><h2>One situation, two voices</h2>
+      <p>Pick a real support moment below. See how a warm brand and a premium brand each answer it, professionally, with the facts the customer actually needs. Switch between them.</p></div>
+    <div class="scen-tabs" id="scenTabs">
+      <button class="scen-tab active" data-s="late">Order running late</button>
+      <button class="scen-tab" data-s="download">Download won't open</button>
+      <button class="scen-tab" data-s="refund">Refund that doesn't qualify</button>
+    </div>
+    <div class="custmsg" id="custmsg"></div>
+    <div class="vgrid" id="vgrid"></div>
+    <div class="note-k" id="notek"></div>
+  </div></section>
+
+  <div class="band"><div class="wrap"><section style="padding:46px 0;">
+    <div class="sec-head"><span class="num">4</span><h2>Get each case to the right agent, fast</h2>
+      <p>The fastest resolution starts before an agent even reads the ticket: by making sure it lands with the right person the first time. Every reassignment is lost minutes and a colder customer. Here's how I'd set that up in Zendesk.</p></div>
+    <div class="grid2">
+      <div class="st"><div class="n">1</div><h3>Sort it the moment it lands</h3><p>Triggers run on every new ticket and can auto-assign it to the right group, set its priority, and tag it, based on topic, channel, language, or sentiment. It starts in the right queue instead of bouncing around.</p></div>
+      <div class="st"><div class="n">2</div><h3>Route by skill, not just who's free</h3><p>Skills-based routing sends a ticket to agents who can actually solve it (language, billing, technical), so the first person to open it is the right person. Fewer handoffs, faster fixes.</p></div>
+      <div class="st"><div class="n">3</div><h3>Let omnichannel routing balance the load</h3><p>It auto-assigns tickets across email, chat, and calls by who is available and has spare capacity, so nothing sits unassigned and no single agent drowns.</p></div>
+      <div class="st"><div class="n">4</div><h3>Prioritize with SLAs and clean views</h3><p>SLA policies push the most urgent and oldest tickets to the top, and well-built views make sure nothing slips while the team stays fast.</p></div>
+    </div>
+    <p class="body" style="margin-top:24px;">Route it right the first time and you cut the reassignments and reopens (the bounce), you speed up first response and resolution, and that shows up directly in CSAT. And because the voice lives in your macros, the customer gets the same calm, on-brand reply no matter who picks it up.</p>
+    <p class="body" style="color:var(--mute);font-size:.95rem;">A note on plans: triggers, groups, and views work on every Zendesk plan; skills- and priority-based routing live on the higher tiers.</p>
+    <p class="body"><a href="routing-tickets-in-zendesk.html">→ See the visual Zendesk routing setup guide</a></p>
+    <p class="body"><a href="macros-and-templates.html">→ See the matching macro &amp; template pack</a></p>
+  </section></div></div>
+</main>
+
+<footer><div class="wrap">
+  A free resource by Mónica Gómez Vesga · Customer Experience &amp; Support (ES/EN) · <a href="index.html">back to portfolio</a>
+</div></footer>
+
+<script>
+  document.querySelectorAll('.seg').forEach(function(seg){
+    seg.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        seg.querySelectorAll('button').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+      });
+    });
+  });
+  function segVal(n){var s=document.querySelector('.seg[data-name="'+n+'"]').querySelector('button.on');return s?s.textContent:'';}
+  function scale(v){v=+v;return v<25?'low':v<50?'medium-low':v<75?'medium-high':'high';}
+  var d_form=document.getElementById('d-form'),d_warm=document.getElementById('d-warm'),d_energy=document.getElementById('d-energy'),
+      w_use=document.getElementById('w-use'),w_avoid=document.getElementById('w-avoid');
+  document.getElementById('copyCheat').addEventListener('click',function(){
+    var b=this, sheet='BRAND VOICE CHEAT SHEET\n-----------------------\n'+
+      'Formality: '+scale(d_form.value)+'\nWarmth: '+scale(d_warm.value)+'\nEnergy: '+scale(d_energy.value)+
+      '\nHumor: '+segVal('humor')+'\nEmoji: '+segVal('emoji')+
+      '\nWords we use: '+(w_use.value||'(add yours)')+'\nWords we avoid: '+(w_avoid.value||'(add yours)')+'\n';
+    navigator.clipboard.writeText(sheet).then(function(){
+      b.textContent='Copied to clipboard ✓';b.classList.add('done');
+      setTimeout(function(){b.textContent='Copy my cheat sheet';b.classList.remove('done');},1800);
+    }).catch(function(){b.textContent='Press Ctrl+C';});
+  });
+
+  var V=function(t){return t.replace(/(\{[^}]+\})/g,'<v>$1</v>');};
+  var data={
+    late:{
+      msg:"My order hasn't arrived and I need it for the weekend.",
+      warm:"Hi {first_name}, thanks for flagging this, and I'm sorry it's cutting so close to the weekend. I checked it for you: order {order_id} is in transit and now expected on Saturday. Here's your tracking link so you can follow it: {tracking_link} (tracking number {tracking_number}). I'll keep an eye on it from my side too, and if it looks like it won't make it in time, I'll step in with a fix before you have to ask.",
+      premium:"Dear {first_name}, thank you for letting me know, and I'm sorry your order is behind schedule. I've looked into it personally: order {order_id} is in transit and now expected on Saturday. You can follow its progress here: {tracking_link} (tracking number {tracking_number}). I'll monitor it on our end as well, and should it not arrive in time, I'll arrange a suitable solution right away.",
+      note:"Both lead with the fix and the tracking number. A worried customer wants certainty first; personality comes second, and quietly."
+    },
+    download:{
+      msg:"I paid for the guide but the download link won't open. I just want what I paid for.",
+      warm:"Hi {first_name}, sorry for the trouble, that's the last thing you need after buying. Let's fix it. I just re-sent your download to {email}, and it should arrive in a couple of minutes (worth a quick look in your spam folder). The link stays active for {days} days and works on any device. If it still won't open, tell me what happens when you click and which device and browser you're on, and I'll get you a working copy a different way today.",
+      premium:"Dear {first_name}, I'm sorry you've had difficulty accessing your purchase. I've re-issued your download to {email}; it should arrive within a few minutes, and it may be worth checking your spam folder. The link remains valid for {days} days and works across devices. If the issue persists, please let me know what appears when you select it, along with your device and browser, and I'll make sure you receive a working copy today.",
+      note:"When someone can't get what they paid for, resolve first and explain second. Re-send the access before you start troubleshooting."
+    },
+    refund:{
+      msg:"I want a refund for this. It's not what I expected.",
+      warm:"Hi {first_name}, thanks for being honest with me, and I'm sorry it wasn't what you expected. I looked into a refund for {item}, and I want to be straight with you: it falls outside our refund window, so I'm not able to refund this one. I know that's disappointing. What I can do is {alternative}, and I'm happy to set that up right now. And if something is actually wrong with the product, that's a different case, so tell me more and we'll take another look.",
+      premium:"Dear {first_name}, thank you for getting in touch, and I'm sorry the product didn't meet your expectations. Having reviewed your request for {item}, this purchase falls outside the conditions for a refund, so I'm unable to process one in this instance. I understand that isn't the outcome you hoped for. What I can offer instead is {alternative}, which I'd be glad to arrange. If you believe the item is faulty, please let me know, as that is assessed separately.",
+      note:"Never remind a customer that they agreed to the terms; it reads as blame. State the policy as a plain fact, lead with empathy, offer a real alternative, and leave a door open for a genuine fault."
+    }
+  };
+  var custmsg=document.getElementById('custmsg'),vgrid=document.getElementById('vgrid'),notek=document.getElementById('notek');
+  function render(key){
+    var d=data[key];
+    custmsg.innerHTML='<b>Customer</b>\u201c'+d.msg+'\u201d';
+    vgrid.innerHTML=
+      '<div class="vcard warm"><div class="vhead">Warm &amp; friendly brand</div><div class="vbody">'+V(d.warm)+'</div></div>'+
+      '<div class="vcard premium"><div class="vhead">Calm &amp; premium brand</div><div class="vbody">'+V(d.premium)+'</div></div>';
+    notek.innerHTML='<b>The craft</b>'+d.note;
+  }
+  document.querySelectorAll('#scenTabs .scen-tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      document.querySelectorAll('#scenTabs .scen-tab').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active'); render(t.dataset.s);
+    });
+  });
+  render('late');
+</script>
+</body>
+</html>

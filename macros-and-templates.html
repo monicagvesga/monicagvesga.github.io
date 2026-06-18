@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customer Support Macros &amp; Templates · Mónica Gómez Vesga</title>
+<meta name="description" content="A free, ready-to-use pack of customer support macros and templates, plus a simple method for building your own. By Mónica Gómez Vesga." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F4F1EB; --ink:#1C2B2A; --mute:#6E6A60; --line:#E4DED2; --card:#FFFFFF;
+    --teal:#1C6B5E; --teal-deep:#134B43; --clay:#C0543B; --clay-deep:#9E3F2B;
+    --tint:#F1F6F2; --blush:#F6ECE6; --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;
+    font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .sans{font-family:"Space Grotesk",system-ui,sans-serif;}
+  a{color:var(--teal);text-decoration:none;} a:hover{color:var(--clay);}
+  h1,h2,h3,.eyebrow,.sans,nav,.chip,.copy-btn,.m-cat,.step-n,label{font-family:"Space Grotesk",system-ui,sans-serif;}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(244,241,235,.88);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  .brand{font-weight:600;font-size:14.5px;color:var(--ink);}
+  .nav-inner a.back{font-size:13.5px;font-weight:500;color:var(--mute);}
+  .nav-inner a.back:hover{color:var(--ink);}
+
+  .hero{padding:64px 0 30px;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05;
+    font-size:clamp(2.2rem,5.5vw,3.4rem);margin:.35em 0 .3em;}
+  .lede{font-size:clamp(1.05rem,2.2vw,1.25rem);max-width:54ch;color:var(--ink);}
+  .freebadge{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:600;
+    color:var(--teal-deep);background:var(--tint);border:1px solid #D7E6DD;border-radius:999px;padding:5px 13px;margin-top:18px;}
+
+  section{padding:34px 0;}
+  .sec-head h2{font-weight:600;font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.015em;margin:.1em 0 .2em;}
+  .sec-head p{color:var(--mute);max-width:60ch;margin:.2em 0 0;}
+  .sec-head{margin-bottom:18px;}
+
+  /* how to use strip */
+  .howto{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+  .howto .c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px;}
+  .howto .num{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--clay);font-size:13px;}
+  .howto h3{font-family:"Space Grotesk",sans-serif;font-size:1.02rem;margin:.4em 0 .3em;}
+  .howto p{margin:0;font-size:.98rem;color:var(--ink);}
+  @media(max-width:680px){.howto{grid-template-columns:1fr;}}
+
+  /* infographic frame */
+  .info{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;margin-top:6px;}
+  .info svg{width:100%;height:auto;display:block;}
+  .info .cap{font-family:"Space Grotesk",sans-serif;font-size:12.5px;color:var(--mute);text-align:center;margin-top:14px;}
+
+  /* filter chips */
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 22px;}
+  .chip{font-size:13px;font-weight:500;color:var(--ink);border:1px solid var(--line);background:#fff;
+    border-radius:999px;padding:7px 15px;cursor:pointer;transition:.15s;}
+  .chip:hover{border-color:var(--teal);}
+  .chip.active{background:var(--teal);border-color:var(--teal);color:#fff;}
+
+  /* macro cards */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:680px){.grid{grid-template-columns:1fr;}}
+  .macro{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px;display:flex;flex-direction:column;}
+  .macro.hide{display:none;}
+  .m-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;}
+  .m-cat{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+  .copy-btn{font-size:12px;font-weight:600;color:var(--teal-deep);background:var(--tint);border:1px solid #D7E6DD;
+    border-radius:999px;padding:5px 13px;cursor:pointer;transition:.15s;}
+  .copy-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal);}
+  .copy-btn.done{background:var(--clay);color:#fff;border-color:var(--clay);}
+  .macro h3{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.08rem;margin:0 0 .5em;}
+  .m-body{margin:0 0 10px;font-size:1rem;line-height:1.55;}
+  .m-body v{color:var(--clay);font-style:normal;font-family:"Space Grotesk",sans-serif;font-size:.92em;}
+  .m-why{margin:auto 0 0;font-style:italic;color:var(--mute);font-size:.92rem;border-top:1px solid var(--line);padding-top:10px;}
+  .macro.soft{background:var(--blush);border-color:#E7D6CC;}
+  .macro.soft .m-cat,.macro.soft .m-body v{color:var(--clay);}
+  .macro.soft .copy-btn{background:#fff;border-color:#E7D6CC;color:var(--clay-deep);}
+  .macro.soft .copy-btn:hover{background:var(--clay);color:#fff;}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px;}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;position:relative;}
+  .step-n{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;font-weight:600;font-size:14px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .step h3{font-family:"Space Grotesk",sans-serif;font-size:1rem;margin:0 0 .35em;}
+  .step p{margin:0;font-size:.94rem;color:var(--ink);}
+  @media(max-width:680px){.steps{grid-template-columns:1fr 1fr;}}
+  @media(max-width:430px){.steps{grid-template-columns:1fr;}}
+
+  .callout{background:var(--teal-deep);color:#EAF1ED;border-radius:16px;padding:24px 26px;margin-top:24px;}
+  .callout strong{color:#fff;}
+
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 56px;color:var(--mute);
+    font-family:"Space Grotesk",sans-serif;font-size:13px;}
+  footer a{color:var(--teal);}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+  <span class="brand">Mónica Gómez Vesga</span>
+  <a class="back" href="index.html">← Back to portfolio</a>
+</div></header>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <span class="eyebrow">Free resource · Customer support</span>
+    <h1>Customer Support Macros &amp; Templates</h1>
+    <p class="lede">Ten ready-to-use replies for chat, email, and help desks, plus a simple way to build your own. Copy any of them, swap the highlighted parts, and match the voice to your brand.</p>
+    <span class="freebadge">Free to use · by Mónica Gómez Vesga</span>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="howto">
+      <div class="c"><div class="num">01</div><h3>Paste it in</h3><p>Drop any template into Zendesk (or any help desk) as a macro.</p></div>
+      <div class="c"><div class="num">02</div><h3>Swap the <v style="color:var(--clay);font-family:'Space Grotesk'">{parts}</v></h3><p>The highlighted brackets are the only bits you personalize per ticket.</p></div>
+      <div class="c"><div class="num">03</div><h3>Match the voice</h3><p>Adjust the tone so it sounds like your brand, not a robot.</p></div>
+    </div>
+  </div></section>
+
+  <!-- INFOGRAPHIC: anatomy -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">The idea</span><h2>What a one-touch reply is made of</h2>
+      <p>Great support replies tend to share the same four moves. Hit all four and the customer rarely has to write back.</p></div>
+    <div class="info">
+      <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four parts of a strong support reply">
+        <defs>
+          <style>
+            .lbl{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#134B43;}
+            .desc{font-family:'Space Grotesk',sans-serif;font-size:11.5px;fill:#6E6A60;}
+            .num{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;fill:#fff;}
+          </style>
+        </defs>
+        <rect x="0" y="0" width="760" height="300" fill="none"/>
+        <!-- vertical reply mock on left -->
+        <rect x="14" y="20" width="300" height="260" rx="12" fill="#F1F6F2" stroke="#D7E6DD"/>
+        <text x="32" y="52" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">Hi <tspan fill="#C0543B">{first_name}</tspan>, you're right to be</text>
+        <text x="32" y="72" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">frustrated, and I'm sorry about this.</text>
+        <text x="32" y="104" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">Your order <tspan fill="#C0543B">{order_id}</tspan> is on its way</text>
+        <text x="32" y="124" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">and arrives by <tspan fill="#C0543B">{date}</tspan>.</text>
+        <text x="32" y="156" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">If it's not there by then, just reply</text>
+        <text x="32" y="176" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">here and I'll chase it right away.</text>
+        <text x="32" y="208" font-family="Newsreader, serif" font-size="13" fill="#1C2B2A">Anything else I can help with?</text>
+        <!-- connectors and labels -->
+        <g>
+          <circle cx="360" cy="46" r="13" fill="#C0543B"/><text x="360" y="51" text-anchor="middle" class="num">1</text>
+          <text x="386" y="42" class="lbl">Acknowledge</text><text x="386" y="58" class="desc">name the feeling, own it</text>
+          <circle cx="360" cy="115" r="13" fill="#1C6B5E"/><text x="360" y="120" text-anchor="middle" class="num">2</text>
+          <text x="386" y="111" class="lbl">Answer fully</text><text x="386" y="127" class="desc">the actual fix, with the facts</text>
+          <circle cx="360" cy="167" r="13" fill="#1C6B5E"/><text x="360" y="172" text-anchor="middle" class="num">3</text>
+          <text x="386" y="163" class="lbl">Handle the next question</text><text x="386" y="179" class="desc">what if it's still late?</text>
+          <circle cx="360" cy="208" r="13" fill="#1C6B5E"/><text x="360" y="213" text-anchor="middle" class="num">4</text>
+          <text x="386" y="204" class="lbl">Leave an easy door open</text><text x="386" y="220" class="desc">no effort to come back</text>
+        </g>
+      </svg>
+      <div class="cap">The orange text is what you personalize. Everything else stays put.</div>
+    </div>
+  </div></section>
+
+  <!-- TEMPLATES -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">The pack</span><h2>Ten templates, ready to copy</h2>
+      <p>Filter by situation, then hit Copy. Each one already does the four moves above.</p></div>
+    <div class="chips" id="chips">
+      <button class="chip active" data-cat="all">All</button>
+      <button class="chip" data-cat="orders">Orders &amp; shipping</button>
+      <button class="chip" data-cat="refunds">Refunds</button>
+      <button class="chip" data-cat="returns">Returns</button>
+      <button class="chip" data-cat="tricky">Tricky moments</button>
+      <button class="chip" data-cat="subs">Subscriptions</button>
+      <button class="chip" data-cat="closing">Closing</button>
+    </div>
+    <div class="grid" id="grid">
+
+      <article class="macro" data-cat="orders">
+        <div class="m-head"><span class="m-cat">Orders &amp; shipping</span><button class="copy-btn">Copy</button></div>
+        <h3>Where's my order?</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, thanks for checking in. Your order <v>{order_id}</v> is on its way and currently <v>{status}</v>. You can follow it here: <v>{tracking_link}</v>, and it's expected by <v>{date}</v>. If it hasn't arrived by then, just reply to this message and I'll chase it for you right away.</p>
+        <p class="m-why">Why it works: answers the question and the next one in one reply.</p>
+      </article>
+
+      <article class="macro" data-cat="orders">
+        <div class="m-head"><span class="m-cat">Orders &amp; shipping</span><button class="copy-btn">Copy</button></div>
+        <h3>Shipping delay</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, I want to be upfront with you: your order <v>{order_id}</v> is running late because of <v>{reason}</v>. I'm sorry, that's frustrating when you were expecting it. The new estimated date is <v>{date}</v>, and here's your tracking link: <v>{tracking_link}</v>. If that timing doesn't work, reply here and we'll set up a refund or a reshipment, your call.</p>
+        <p class="m-why">Why it works: bad news first, clear ownership, a new date, and a way out.</p>
+      </article>
+
+      <article class="macro" data-cat="refunds">
+        <div class="m-head"><span class="m-cat">Refunds</span><button class="copy-btn">Copy</button></div>
+        <h3>Refund approved</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, good news: your refund of <v>{amount}</v> is approved and on its way back to your <v>{payment_method}</v> now. It usually lands within <v>{time_frame}</v>, and you'll get a confirmation email the moment it clears. Anything else I can help with while I'm here?</p>
+        <p class="m-why">Why it works: confirms the money, sets timing, leaves the door open.</p>
+      </article>
+
+      <article class="macro" data-cat="refunds">
+        <div class="m-head"><span class="m-cat">Refunds</span><button class="copy-btn">Copy</button></div>
+        <h3>Refund declined, kindly</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, I wish I could say yes to this one. We're not able to refund <v>{item}</v> because <v>{reason}</v>. I know that's not the answer you were hoping for. What I can do instead is <v>{alternative}</v>, which gets you most of the way there. Want me to set that up?</p>
+        <p class="m-why">Why it works: a warm no, a plain reason, and a real alternative.</p>
+      </article>
+
+      <article class="macro" data-cat="returns">
+        <div class="m-head"><span class="m-cat">Returns</span><button class="copy-btn">Copy</button></div>
+        <h3>Return or exchange</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, happy to help you <v>{return_or_exchange}</v> this. Here's how it works: <v>{step_1}</v>, then <v>{step_2}</v>, then <v>{step_3}</v>. I've emailed you a prepaid label, so you won't pay for shipping. Once it reaches us, your <v>{refund_or_replacement}</v> goes out within <v>{time_frame}</v>. Just let me know if anything's unclear.</p>
+        <p class="m-why">Why it works: turns a chore into three steps and removes the cost worry.</p>
+      </article>
+
+      <article class="macro soft" data-cat="tricky">
+        <div class="m-head"><span class="m-cat">Tricky moments</span><button class="copy-btn">Copy</button></div>
+        <h3>De-escalation opener</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, you're right to be frustrated, and I'm sorry this has landed on you. Let me get straight to it: <v>{what_you_are_doing_now}</v>. Give me <v>{time}</v> and I'll come back with a real fix, not a holding message. I've got this from here.</p>
+        <p class="m-why">Why it works: validates the feeling, takes ownership, promises one next step.</p>
+      </article>
+
+      <article class="macro soft" data-cat="tricky">
+        <div class="m-head"><span class="m-cat">Tricky moments</span><button class="copy-btn">Copy</button></div>
+        <h3>I don't have the answer yet</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, thanks for your patience. I don't want to give you a half-answer, so I'm checking the details with our <v>{team}</v> team now. I'll come back to you by <v>{time}</v> with a clear update. You don't need to do anything in the meantime.</p>
+        <p class="m-why">Why it works: honest about the wait, sets a deadline, no effort for them.</p>
+      </article>
+
+      <article class="macro" data-cat="subs">
+        <div class="m-head"><span class="m-cat">Subscriptions</span><button class="copy-btn">Copy</button></div>
+        <h3>Pause or cancel a subscription</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, no problem at all, I can <v>{pause_or_cancel}</v> your subscription. Before I do, would <v>{alternative}</v> work better for you? Either way is completely fine, just tell me which and it's done. No hoops.</p>
+        <p class="m-why">Why it works: offers a softer option without pushing, and makes leaving easy.</p>
+      </article>
+
+      <article class="macro soft" data-cat="tricky">
+        <div class="m-head"><span class="m-cat">Tricky moments</span><button class="copy-btn">Copy</button></div>
+        <h3>A sensitive or personal question</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, thanks for asking, and please don't feel awkward, this is exactly the kind of thing we're here for. <v>{clear_answer}</v>. If anything is still unclear, just tell me and we'll keep going until it's solved. Whatever it is, we'll keep it simple and discreet.</p>
+        <p class="m-why">Why it works: normalizes the question, answers plainly, reassures on privacy.</p>
+      </article>
+
+      <article class="macro" data-cat="closing">
+        <div class="m-head"><span class="m-cat">Closing</span><button class="copy-btn">Copy</button></div>
+        <h3>A friendly close</h3>
+        <p class="m-body">Hi <v>{first_name}</v>, glad we got that taken care of. I'll leave this open for a couple of days in case anything else comes up, so feel free to reply if it does. Take care, and thanks for your patience today.</p>
+        <p class="m-why">Why it works: a warm goodbye that invites them back without nagging.</p>
+      </article>
+
+    </div>
+  </div></section>
+
+  <!-- STEPS -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Make your own</span><h2>Build a macro in four steps</h2>
+      <p>The same method I used to rebuild a support setup from scratch.</p></div>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3>Spot the pattern</h3><p>Find the questions that keep coming back and group them.</p></div>
+      <div class="step"><div class="step-n">2</div><h3>Write one full reply</h3><p>Solve it completely, on-brand, with <v style="color:var(--clay);font-family:'Space Grotesk'">{variables}</v> for the personal bits.</p></div>
+      <div class="step"><div class="step-n">3</div><h3>Build in the next question</h3><p>So the customer doesn't have to write back a second time.</p></div>
+      <div class="step"><div class="step-n">4</div><h3>Review and refine</h3><p>Update the macro as wording or policy changes, so the team stays consistent.</p></div>
+    </div>
+  </div></section>
+
+  <!-- FCR infographic -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Why it matters</span><h2>One reply beats five</h2>
+      <p>A good macro turns a back-and-forth into a one-touch resolution, what most help desks count as first-contact resolution (FCR).</p></div>
+    <div class="info">
+      <svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One-touch resolution versus a long back and forth">
+        <defs><style>
+          .t{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#1C2B2A;}
+          .s{font-family:'Space Grotesk',sans-serif;font-size:11.5px;fill:#6E6A60;}
+          .b{font-family:'Newsreader',serif;font-size:11px;fill:#1C2B2A;}
+        </style></defs>
+        <!-- multi-touch -->
+        <text x="20" y="30" class="t">Without a good macro</text>
+        <text x="20" y="48" class="s">5 messages, 2 days, a tired customer</text>
+        <g>
+          <rect x="20" y="62" width="150" height="26" rx="6" fill="#F4EFE7" stroke="#E4DED2"/><text x="30" y="79" class="b">customer asks</text>
+          <rect x="180" y="62" width="150" height="26" rx="6" fill="#fff" stroke="#E4DED2"/><text x="190" y="79" class="b">vague reply</text>
+          <rect x="20" y="96" width="150" height="26" rx="6" fill="#F4EFE7" stroke="#E4DED2"/><text x="30" y="113" class="b">customer asks again</text>
+          <rect x="180" y="96" width="150" height="26" rx="6" fill="#fff" stroke="#E4DED2"/><text x="190" y="113" class="b">another reply</text>
+          <rect x="20" y="130" width="150" height="26" rx="6" fill="#F4EFE7" stroke="#E4DED2"/><text x="30" y="147" class="b">customer frustrated</text>
+        </g>
+        <!-- divider -->
+        <line x1="380" y1="20" x2="380" y2="210" stroke="#E4DED2"/>
+        <!-- one-touch -->
+        <text x="410" y="30" class="t" fill="#134B43">With a one-touch macro</text>
+        <text x="410" y="48" class="s">1 message, minutes, a happy customer</text>
+        <rect x="410" y="62" width="320" height="26" rx="6" fill="#F4EFE7" stroke="#E4DED2"/><text x="420" y="79" class="b">customer asks</text>
+        <rect x="410" y="96" width="320" height="48" rx="8" fill="#F1F6F2" stroke="#D7E6DD"/>
+        <text x="420" y="116" class="b">one clear reply: fix + next question + easy door</text>
+        <text x="420" y="134" class="b" fill="#134B43">resolved on first contact</text>
+        <g transform="translate(410,160)">
+          <circle cx="11" cy="11" r="11" fill="#1C6B5E"/>
+          <path d="M6 11 l3.5 3.5 L16 7" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="32" y="16" class="t" fill="#134B43">FCR up, customer effort down</text>
+        </g>
+      </svg>
+      <div class="cap">Fewer back-and-forths for the customer, a faster queue for the team.</div>
+    </div>
+    <div class="callout">
+      <strong>The takeaway.</strong> A template is not about sounding scripted. Done right, it lets you be fast <em>and</em> human at the same time, and it frees you to spend real attention on the cases that actually need it.
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  A free resource by Mónica Gómez Vesga · Customer Experience &amp; Support (ES/EN) · <a href="index.html">back to portfolio</a>
+</div></footer>
+
+<script>
+  // copy buttons
+  document.querySelectorAll('.copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var txt = btn.closest('.macro').querySelector('.m-body').innerText.trim();
+      navigator.clipboard.writeText(txt).then(function(){
+        btn.textContent='Copied ✓'; btn.classList.add('done');
+        setTimeout(function(){btn.textContent='Copy'; btn.classList.remove('done');},1600);
+      }).catch(function(){
+        btn.textContent='Press Ctrl+C';
+      });
+    });
+  });
+  // filter
+  var chips=document.querySelectorAll('.chip'), cards=document.querySelectorAll('#grid .macro');
+  chips.forEach(function(ch){
+    ch.addEventListener('click',function(){
+      chips.forEach(function(c){c.classList.remove('active');}); ch.classList.add('active');
+      var cat=ch.dataset.cat;
+      cards.forEach(function(card){
+        card.classList.toggle('hide', !(cat==='all'||card.dataset.cat===cat));
+      });
+    });
+  });
+</script>
+</body>
+</html>

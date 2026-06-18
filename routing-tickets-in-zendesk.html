@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Routing Tickets in Zendesk · Mónica Gómez Vesga</title>
+<meta name="description" content="A visual, step-by-step setup guide for routing and assigning tickets in Zendesk, so cases reach the right agent fast. Annotated mockups and links to the official docs. By Mónica Gómez Vesga." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#F3EFE7; --ink:#1B2A29; --mute:#6E6A60; --line:#E4DDCF; --card:#FFFFFF;
+    --teal:#1C6B5E; --teal-deep:#123F39; --clay:#C0543B; --clay-deep:#9E3F2B;
+    --tint:#ECF3EF; --tint2:#EDE7DA; --blush:#F6E9E2; --maxw:940px;
+    --shadow:0 18px 40px -24px rgba(20,40,38,.55);
+    --shadow-sm:0 8px 22px -16px rgba(20,40,38,.5);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  a{color:var(--teal);text-decoration:none;} a:hover{color:var(--clay);}
+  h1,h2,h3,.eyebrow,nav,.crumb,.callouts .b,.path,.tag,.freebadge,.disc b{font-family:"Space Grotesk",system-ui,sans-serif;}
+
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(243,239,231,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;}
+  .brand{font-weight:600;font-size:14.5px;color:var(--ink);font-family:"Space Grotesk",sans-serif;}
+  .nav-inner a.back{font-size:13.5px;font-weight:500;color:var(--mute);}
+  .nav-inner a.back:hover{color:var(--ink);}
+
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(120% 140% at 88% -10%, #E7F0EB 0%, rgba(231,240,235,0) 55%),
+      radial-gradient(90% 120% at 100% 0%, #F6E9E2 0%, rgba(246,233,226,0) 45%);border-bottom:1px solid var(--line);}
+  .hero .wrap{padding:72px 24px 40px;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.022em;line-height:1.04;font-size:clamp(2.2rem,5.6vw,3.5rem);margin:.34em 0 .3em;max-width:17ch;}
+  h1 em{font-style:italic;font-family:"Newsreader",serif;color:var(--clay);font-weight:500;}
+  .lede{font-size:clamp(1.06rem,2.1vw,1.28rem);max-width:54ch;color:var(--ink);}
+  .freebadge{display:inline-block;font-size:12px;font-weight:600;color:var(--teal-deep);background:#fff;border:1px solid #D7E6DD;border-radius:999px;padding:6px 14px;margin-top:18px;box-shadow:var(--shadow-sm);}
+  .disc{max-width:60ch;margin:20px 0 0;font-size:.96rem;color:var(--mute);background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow-sm);}
+  .disc b{color:var(--ink);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:4px;}
+
+  section{padding:42px 0;border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+  .sec-head{margin-bottom:18px;}
+  .sec-head .num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14px;margin-bottom:12px;box-shadow:var(--shadow-sm);}
+  .sec-head h2{font-weight:600;font-size:clamp(1.45rem,3.3vw,2rem);letter-spacing:-.015em;margin:.05em 0 .2em;font-family:"Space Grotesk",sans-serif;}
+  .sec-head p{color:var(--ink);max-width:64ch;margin:.2em 0 0;}
+
+  .crumb{font-size:12px;font-weight:600;color:#123F39;background:#ECF3EF;border:1px solid #CFE2D9;border-radius:9px;padding:8px 13px;display:inline-block;margin-bottom:14px;}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow-sm);}
+  .info svg{width:100%;height:auto;display:block;}
+
+  .callouts{list-style:none;margin:18px 0 0;padding:0;}
+  .callouts li{display:flex;gap:12px;align-items:flex-start;margin:0 0 11px;font-size:1.02rem;}
+  .callouts .b{flex:none;width:25px;height:25px;border-radius:50%;background:var(--clay);color:#fff;font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+  .path{font-size:.94rem;color:var(--mute);margin-top:14px;}
+  .path a{font-weight:600;}
+
+  /* mockup shared classes */
+  .mk-card{fill:#FBF9F4;stroke:#E4DDCF;}
+  .mk-win{fill:#fff;stroke:#E4DDCF;}
+  .mk-lab{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;fill:#6E6A60;letter-spacing:.04em;}
+  .mk-ftxt{font-family:'Newsreader',serif;font-size:13.5px;fill:#1B2A29;}
+  .mk-v{font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:600;fill:#C0543B;}
+  .mk-vt{font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:600;fill:#123F39;}
+  .mk-bnum{fill:#C0543B;}
+  .mk-bt{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;fill:#fff;}
+  .mk-con{stroke:#C0543B;stroke-width:1.4;stroke-dasharray:3 3;fill:none;}
+  .mk-tog{fill:#1C6B5E;}
+
+  .next{background:var(--tint2);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:8px;box-shadow:var(--shadow-sm);}
+  .next a{font-weight:600;}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--mute);font-family:"Space Grotesk",sans-serif;font-size:13px;}
+  footer a{color:var(--teal);}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+  <span class="brand">Mónica Gómez Vesga</span>
+  <a class="back" href="index.html">← Back to portfolio</a>
+</div></header>
+
+<main>
+  <section class="hero" style="border-top:none;padding:0;">
+    <div class="wrap">
+      <span class="eyebrow">Free resource · Zendesk</span>
+      <h1>Routing tickets in Zendesk, <em>step by step</em>.</h1>
+      <p class="lede">How to get each case to the right agent fast, so you cut reassignments (the bounce), speed up resolution, and lift CSAT. Four setups, with the exact path to each one.</p>
+      <span class="freebadge">Free to use · by Mónica Gómez Vesga</span>
+      <div class="disc"><b>About these images</b>These are simplified mockups of each screen, drawn to keep the steps clear. They are not real Zendesk screenshots. Each step links to Zendesk's official guide, where you'll see the live screens.</div>
+    </div>
+  </section>
+
+  <!-- STEP 1: TRIGGER -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">1</span><h2>Sort the ticket the moment it lands</h2>
+      <p>A trigger runs on every new ticket. Use one to send it to the right group, set its priority, and tag it, so it starts in the correct queue instead of bouncing around.</p></div>
+    <span class="crumb">Admin Center › Objects and rules › Business rules › Triggers › Create trigger</span>
+    <div class="info">
+      <svg viewBox="0 0 700 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A Zendesk trigger with conditions and actions">
+        <rect class="mk-win" x="6" y="6" width="540" height="244" rx="12"/>
+        <text class="mk-lab" x="24" y="34">CONDITIONS · MEET ALL</text>
+        <rect class="mk-card" x="24" y="44" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="64">Channel &#160;&#160;is&#160;&#160; <tspan class="mk-v">Email</tspan></text>
+        <rect class="mk-card" x="24" y="82" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="102">Language &#160;&#160;is&#160;&#160; <tspan class="mk-v">Spanish</tspan></text>
+        <text class="mk-lab" x="24" y="142">ACTIONS</text>
+        <rect class="mk-card" x="24" y="152" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="172">Group &#160;&#8594;&#160; <tspan class="mk-vt">ES Support team</tspan></text>
+        <rect class="mk-card" x="24" y="190" width="245" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="210">Priority &#160;&#8594;&#160; <tspan class="mk-vt">Normal</tspan></text>
+        <rect class="mk-card" x="279" y="190" width="245" height="32" rx="8"/>
+        <text class="mk-ftxt" x="293" y="210">Add tag &#160;&#8594;&#160; <tspan class="mk-v">auto_routing</tspan></text>
+        <!-- badges -->
+        <path class="mk-con" d="M524 60 H 600"/><circle class="mk-bnum" cx="618" cy="60" r="13"/><text class="mk-bt" x="618" y="65" text-anchor="middle">1</text>
+        <path class="mk-con" d="M524 168 H 600"/><circle class="mk-bnum" cx="618" cy="168" r="13"/><text class="mk-bt" x="618" y="173" text-anchor="middle">2</text>
+        <path class="mk-con" d="M524 206 H 600"/><circle class="mk-bnum" cx="618" cy="206" r="13"/><text class="mk-bt" x="618" y="211" text-anchor="middle">3</text>
+      </svg>
+    </div>
+    <ol class="callouts">
+      <li><span class="b">1</span><div><b>Conditions</b> decide which tickets this trigger catches, by channel, language, topic, tags, even sentiment.</div></li>
+      <li><span class="b">2</span><div><b>Actions</b> send it to the right group and set its priority, so it lands in the correct queue from the start.</div></li>
+      <li><span class="b">3</span><div>The <b>auto_routing</b> tag is what hands the ticket over to omnichannel routing (Step 3) for auto-assignment.</div></li>
+    </ol>
+    <p class="path">Zendesk's official guide: <a href="https://support.zendesk.com/hc/en-us/articles/4944922385050-Getting-started-with-Zendesk-Suite-Part-6-Routing-incoming-support-requests" target="_blank" rel="noopener">Routing incoming support requests ↗</a></p>
+  </div></section>
+
+  <!-- STEP 2: SKILLS -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">2</span><h2>Route by skill, not just who's free</h2>
+      <p>Skills are agent attributes (language, product, billing, technical). Tag a ticket with the skill it needs and it goes to an agent who can actually solve it, so the first person to open it is the right person.</p></div>
+    <span class="crumb">Admin Center › Objects and rules › Business rules › Skills</span>
+    <div class="info">
+      <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zendesk skills setup">
+        <rect class="mk-win" x="6" y="6" width="540" height="228" rx="12"/>
+        <text class="mk-lab" x="24" y="34">SKILL TYPE</text>
+        <rect class="mk-card" x="24" y="44" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="64">Language</text>
+        <rect x="150" y="49" width="78" height="22" rx="11" fill="#ECF3EF" stroke="#CFE2D9"/><text class="mk-vt" x="189" y="64" text-anchor="middle" font-size="11.5">Spanish</text>
+        <rect x="236" y="49" width="74" height="22" rx="11" fill="#ECF3EF" stroke="#CFE2D9"/><text class="mk-vt" x="273" y="64" text-anchor="middle" font-size="11.5">English</text>
+        <rect x="318" y="49" width="70" height="22" rx="11" fill="#ECF3EF" stroke="#CFE2D9"/><text class="mk-vt" x="353" y="64" text-anchor="middle" font-size="11.5">French</text>
+        <text class="mk-lab" x="24" y="104">ASSIGN TO AGENTS</text>
+        <rect class="mk-card" x="24" y="114" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="134">Mónica &#160;<tspan class="mk-vt">Spanish, English</tspan>&#160;&#160;·&#160;&#160;Liam &#160;<tspan class="mk-vt">English, French</tspan></text>
+        <text class="mk-lab" x="24" y="174">TRIGGER ACTION</text>
+        <rect class="mk-card" x="24" y="184" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="204">Add skill &#160;&#8594;&#160; <tspan class="mk-v">Spanish (required)</tspan></text>
+        <path class="mk-con" d="M524 60 H 600"/><circle class="mk-bnum" cx="618" cy="60" r="13"/><text class="mk-bt" x="618" y="65" text-anchor="middle">1</text>
+        <path class="mk-con" d="M524 130 H 600"/><circle class="mk-bnum" cx="618" cy="130" r="13"/><text class="mk-bt" x="618" y="135" text-anchor="middle">2</text>
+        <path class="mk-con" d="M524 200 H 600"/><circle class="mk-bnum" cx="618" cy="200" r="13"/><text class="mk-bt" x="618" y="205" text-anchor="middle">3</text>
+      </svg>
+    </div>
+    <ol class="callouts">
+      <li><span class="b">1</span><div>Create <b>skill types</b> and skills (Language, Product, Technical, Billing).</div></li>
+      <li><span class="b">2</span><div><b>Assign</b> each skill to the agents who have it.</div></li>
+      <li><span class="b">3</span><div>Use a <b>trigger</b> to add the needed skill to the ticket. Mark it required or optional. Required never times out; optional is dropped if no skilled agent is free, so the ticket still moves.</div></li>
+    </ol>
+    <p class="path">Zendesk's official guide: <a href="https://support.zendesk.com/hc/en-us/articles/5833468891674-About-using-skills-to-route-tickets" target="_blank" rel="noopener">Using skills to route tickets ↗</a></p>
+  </div></section>
+
+  <!-- STEP 3: OMNICHANNEL -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">3</span><h2>Let omnichannel routing balance the load</h2>
+      <p>Turn this on and Zendesk auto-assigns tickets across email, chat, and calls by who is available and has spare capacity, so nothing sits unassigned and no single agent drowns. On higher plans it also weighs priority and skills.</p></div>
+    <span class="crumb">Admin Center › Objects and rules › Omnichannel routing</span>
+    <div class="info">
+      <svg viewBox="0 0 700 234" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zendesk omnichannel routing settings">
+        <rect class="mk-win" x="6" y="6" width="540" height="222" rx="12"/>
+        <rect class="mk-card" x="24" y="26" width="500" height="36" rx="8"/>
+        <text class="mk-ftxt" x="38" y="49">Omnichannel routing</text>
+        <rect x="464" y="34" width="44" height="20" rx="10" class="mk-tog"/><circle cx="498" cy="44" r="7.5" fill="#fff"/>
+        <text class="mk-vt" x="430" y="49" text-anchor="end" font-size="11">ON</text>
+        <text class="mk-lab" x="24" y="92">ASSIGNMENT METHOD</text>
+        <rect class="mk-card" x="24" y="102" width="245" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="122">Spare capacity <tspan class="mk-v">&#9662;</tspan></text>
+        <rect class="mk-card" x="279" y="102" width="245" height="32" rx="8"/>
+        <text class="mk-ftxt" x="293" y="122">or Round robin</text>
+        <text class="mk-lab" x="24" y="162">CAPACITY RULES</text>
+        <rect class="mk-card" x="24" y="172" width="500" height="32" rx="8"/>
+        <text class="mk-ftxt" x="38" y="192">Email <tspan class="mk-vt">8</tspan>&#160;&#160;·&#160;&#160;Chat <tspan class="mk-vt">2</tspan>&#160;&#160;·&#160;&#160;Calls <tspan class="mk-vt">1</tspan></text>
+        <path class="mk-con" d="M524 44 H 600"/><circle class="mk-bnum" cx="618" cy="44" r="13"/><text class="mk-bt" x="618" y="49" text-anchor="middle">1</text>
+        <path class="mk-con" d="M524 118 H 600"/><circle class="mk-bnum" cx="618" cy="118" r="13"/><text class="mk-bt" x="618" y="123" text-anchor="middle">2</text>
+        <path class="mk-con" d="M524 188 H 600"/><circle class="mk-bnum" cx="618" cy="188" r="13"/><text class="mk-bt" x="618" y="193" text-anchor="middle">3</text>
+      </svg>
+    </div>
+    <ol class="callouts">
+      <li><span class="b">1</span><div><b>Turn it on.</b> It works with the triggers you set in Step 1; email tickets need the auto_routing tag to be picked up.</div></li>
+      <li><span class="b">2</span><div>Pick the <b>assignment method</b>: spare capacity (busiest gets less) or round robin (take turns).</div></li>
+      <li><span class="b">3</span><div>Set <b>capacity rules</b> so each agent only holds so much at once. That is what stops anyone from drowning.</div></li>
+    </ol>
+    <p class="path">Zendesk's official guide: <a href="https://support.zendesk.com/hc/en-us/articles/4409149119514-About-omnichannel-routing" target="_blank" rel="noopener">About omnichannel routing ↗</a></p>
+  </div></section>
+
+  <!-- STEP 4: SLA + VIEWS -->
+  <section><div class="wrap">
+    <div class="sec-head"><span class="num">4</span><h2>Prioritize with SLAs and clean views</h2>
+      <p>An SLA policy sets time targets per priority, and a good view surfaces the most urgent and oldest tickets first, so nothing slips while the team stays fast.</p></div>
+    <span class="crumb">Admin Center › Objects and rules › Business rules › Service level agreements</span>
+    <div class="info">
+      <svg viewBox="0 0 700 232" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zendesk SLA targets and a prioritized view">
+        <rect class="mk-win" x="6" y="6" width="330" height="220" rx="12"/>
+        <text class="mk-lab" x="24" y="34">SLA TARGETS</text>
+        <rect class="mk-card" x="24" y="44" width="294" height="30" rx="8"/>
+        <text class="mk-ftxt" x="36" y="63">First reply (Urgent) &#160;<tspan class="mk-v">4h</tspan></text>
+        <rect class="mk-card" x="24" y="80" width="294" height="30" rx="8"/>
+        <text class="mk-ftxt" x="36" y="99">First reply (Normal) &#160;<tspan class="mk-vt">8h</tspan></text>
+        <rect class="mk-card" x="24" y="116" width="294" height="30" rx="8"/>
+        <text class="mk-ftxt" x="36" y="135">Resolution (Urgent) &#160;<tspan class="mk-v">24h</tspan></text>
+        <rect class="mk-card" x="24" y="152" width="294" height="30" rx="8"/>
+        <text class="mk-ftxt" x="36" y="171">Resolution (Normal) &#160;<tspan class="mk-vt">48h</tspan></text>
+        <!-- view panel -->
+        <rect class="mk-win" x="356" y="6" width="190" height="220" rx="12"/>
+        <text class="mk-lab" x="372" y="34">VIEW · BY PRIORITY</text>
+        <rect x="372" y="44" width="158" height="26" rx="6" fill="#F6E9E2" stroke="#E7D3C8"/>
+        <text class="mk-v" x="382" y="61" font-size="11.5">Urgent · 2 open</text>
+        <rect x="372" y="76" width="158" height="26" rx="6" fill="#FBF9F4" stroke="#E4DDCF"/>
+        <text class="mk-ftxt" x="382" y="93" font-size="11.5">High · 5 open</text>
+        <rect x="372" y="108" width="158" height="26" rx="6" fill="#FBF9F4" stroke="#E4DDCF"/>
+        <text class="mk-ftxt" x="382" y="125" font-size="11.5">Normal · 12 open</text>
+        <text class="mk-lab" x="372" y="160" fill="#123F39">Oldest first ↑</text>
+        <path class="mk-con" d="M318 59 H 360"/><circle class="mk-bnum" cx="378" cy="59" r="0" opacity="0"/>
+        <path class="mk-con" d="M530 57 H 600"/><circle class="mk-bnum" cx="618" cy="57" r="13"/><text class="mk-bt" x="618" y="62" text-anchor="middle">2</text>
+        <path class="mk-con" d="M318 130 H 340" /><circle class="mk-bnum" cx="600" cy="130" r="0" opacity="0"/>
+        <circle class="mk-bnum" cx="618" cy="130" r="13"/><text class="mk-bt" x="618" y="135" text-anchor="middle">1</text>
+        <path class="mk-con" d="M318 130 H 600"/>
+      </svg>
+    </div>
+    <ol class="callouts">
+      <li><span class="b">1</span><div>Set <b>time targets per priority</b> (first reply, next reply, resolution). Urgent gets a tighter clock than Normal.</div></li>
+      <li><span class="b">2</span><div>Build a <b>view</b> sorted by priority and age, so the most urgent and oldest tickets sit at the top and nothing gets buried.</div></li>
+    </ol>
+    <p class="path">Zendesk's official guide: <a href="https://support.zendesk.com/hc/en-us/articles/4408831658650-Routing-and-automation-options-for-incoming-tickets" target="_blank" rel="noopener">Routing and automation options ↗</a></p>
+  </div></section>
+
+  <!-- TAKEAWAY -->
+  <section><div class="wrap">
+    <div class="next">
+      <p style="margin:0 0 .5em;"><strong>The payoff.</strong> Route it right the first time and you cut reassignments and reopens (the bounce), speed up first response and resolution, and that lands directly in your CSAT.</p>
+      <p style="margin:.4em 0 0;color:var(--mute);font-size:.95rem;">A note on plans: triggers, groups, and views work on every Zendesk plan; skills- and priority-based routing live on the higher tiers.</p>
+      <p style="margin:1em 0 0;">Pair this with the <a href="brand-voice-in-support.html">brand voice guide</a> and the <a href="macros-and-templates.html">macro &amp; template pack</a> for the full picture.</p>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  A free resource by Mónica Gómez Vesga · Customer Experience &amp; Support (ES/EN) · <a href="index.html">back to portfolio</a>
+</div></footer>
+</body>
+</html>
