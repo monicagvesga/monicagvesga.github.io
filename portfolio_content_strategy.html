@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mónica Gómez Vesga — Content Strategist | Editorial Lead | Bilingual SaaS. Content audits, strategy, optimization for search and AI discovery (AEO/GEO). Based in Barcelona.">
+    <title>Mónica Gómez Vesga — Content Strategist & Editorial Lead (EN/ES)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+        nav a {
+            color: #0051ba;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        nav a:hover {
+            border-bottom-color: #0051ba;
+        }
+        .lang-toggle {
+            margin-left: auto;
+            text-align: right;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #0051ba;
+            padding-bottom: 0.5rem;
+        }
+        .tagline {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .hero-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+        .hero-text strong {
+            font-weight: 600;
+            color: #0051ba;
+        }
+        .cta-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+        .cta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 4px solid #0051ba;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s;
+        }
+        .cta-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+        }
+        .cta-card h3 {
+            color: #0051ba;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .cta-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .cta-card a {
+            color: #0051ba;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .cta-card a:hover {
+            text-decoration: underline;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .service-item {
+            border-left: 3px solid #0051ba;
+            padding-left: 1.5rem;
+        }
+        .service-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+        .service-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .service-item ul {
+            font-size: 0.85rem;
+            color: #666;
+            margin-left: 1.5rem;
+            line-height: 1.7;
+        }
+        .service-item li {
+            margin-bottom: 0.3rem;
+        }
+        .case-study {
+            background: white;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .case-study h3 {
+            color: #0051ba;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .case-study .meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .case-study p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+        .case-study .results {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 3px;
+            margin-top: 1rem;
+        }
+        .case-study .results h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+        .case-study .results ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #333;
+        }
+        .case-study .results li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .case-study .results li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0051ba;
+            font-weight: bold;
+        }
+        .toolkit {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+        .toolkit h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+        .toolkit-category {
+            margin-bottom: 1rem;
+        }
+        .toolkit-category strong {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .toolkit-category p {
+            font-size: 0.9rem;
+            color: #333;
+        }
+        .about-text {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 4px solid #0051ba;
+            margin: 2rem 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.85rem;
+            color: #999;
+        }
+        .footer a {
+            color: #0051ba;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .service-grid, .cta-section {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            nav a {
+                margin: 0.25rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#what-i-do">What I Do</a>
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#toolkit">Tools</a>
+            <a href="#about">About</a>
+            <a href="mailto:mnca.gov@gmail.com">Contact</a>
+            <span class="lang-toggle"><a href="#">ES</a></span>
+        </nav>
+
+        <div class="tagline">Bilingual · EN / ES · Barcelona</div>
+
+        <h1>Mónica Gómez Vesga</h1>
+        <div class="tagline" style="margin-top: -1rem; margin-bottom: 1.5rem;">Content Strategist | Editorial Lead | Bilingual SaaS</div>
+
+        <div class="hero-text">
+            <p>I build and optimize <strong>content systems</strong> that scale. I audit what you have, plan what you need, and keep production moving so nothing slips. Eight years of bilingual (ES/EN) work across SaaS, e-commerce, B2B, and editorial.</p>
+            <p style="margin-top: 1rem;">I write and edit content that <strong>ranks on Google, gets picked up by AI search, and retains customers.</strong> Not because I follow rules, but because I understand what your audience is actually looking for.</p>
+        </div>
+
+        <div class="cta-section">
+            <a href="#services" class="cta-card">
+                <h3>For Content Strategy Roles</h3>
+                <p>Content audits, strategy, briefing systems, editorial oversight, team coordination.</p>
+                <a href="#services">See services →</a>
+            </a>
+            <a href="#work" class="cta-card">
+                <h3>For Content Optimization</h3>
+                <p>Rewrite existing content for search, AI discovery (AEO/GEO), and customer retention.</p>
+                <a href="#work">See work →</a>
+            </a>
+        </div>
+
+        <h2 id="what-i-do">What I Actually Do</h2>
+        
+        <p style="margin-bottom: 1.5rem; line-height: 1.8;">Here's the full range of what I handle. I'm not a full-stack digital marketer or a PPC specialist—I focus on what I'm actually good at: strategy, clarity, and keeping content production organized so it delivers.</p>
+
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>📋 Content Audit & Strategy</h3>
+                <p>What exists. What's missing. What needs rewrite. Why.</p>
+                <ul>
+                    <li>Competitive landscape analysis</li>
+                    <li>Content inventory mapping</li>
+                    <li>Coverage gap identification</li>
+                    <li>Keyword intent analysis</li>
+                    <li>12-month content roadmap</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>📝 Content Planning & Briefing</h3>
+                <p>Clear direction so writers (human or AI) deliver right the first time.</p>
+                <ul>
+                    <li>Comprehensive brief templates</li>
+                    <li>Search intent mapping</li>
+                    <li>Semantic structure design</li>
+                    <li>Brand voice guidelines</li>
+                    <li>Localization notes (ES/LATAM)</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>✏️ Editorial Oversight & QA</h3>
+                <p>Review, edit, and maintain consistency across multiple contributors.</p>
+                <ul>
+                    <li>Accuracy & clarity review</li>
+                    <li>Tone & voice alignment</li>
+                    <li>Grammar & style guide compliance</li>
+                    <li>Structural editing</li>
+                    <li>AI workflow QA (if using Claude, ChatGPT)</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>🚀 Content Optimization (Search & AI)</h3>
+                <p>Rewrite for ranking, AI citations, and customer value.</p>
+                <ul>
+                    <li>Google Search ranking optimization</li>
+                    <li>AI Overview (AEO/GEO) optimization</li>
+                    <li>Clarity & structure improvement</li>
+                    <li>Semantic clustering</li>
+                    <li>Readability enhancement</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>🌍 Bilingual Content & Localization</h3>
+                <p>Spain Spanish vs. LATAM Spanish. It matters.</p>
+                <ul>
+                    <li>Localization strategy</li>
+                    <li>Editorial QA (cultural fit)</li>
+                    <li>Regional vocabulary adaptation</li>
+                    <li>LATAM audience positioning</li>
+                    <li>Multilingual team coordination</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>🔄 Team Coordination & Ops</h3>
+                <p>I keep production moving. Nothing slips.</p>
+                <ul>
+                    <li>Calendar & timeline management</li>
+                    <li>Workflow system design</li>
+                    <li>Quality gate documentation</li>
+                    <li>Freelancer/team coordination</li>
+                    <li>Performance tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="services">Services Overview</h2>
+        
+        <p style="margin-bottom: 2rem;">I work in two ways: full-service projects (where I own strategy + execution), and advisory/review roles (where I optimize your existing content or QA your team's work). Pick one or combine both.</p>
+
+        <div class="service-grid">
+            <div style="border-left: 3px solid #0051ba; padding-left: 1.5rem;">
+                <h3 style="color: #222; font-size: 1rem; margin-bottom: 0.5rem;">Full-Service Projects</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">I own the whole thing: audit, strategy, briefing, writing/optimization, QA, delivery.</p>
+                <p style="font-size: 0.85rem; color: #999;">Best for: Launching a content program, scaling to a new market (Spain/LATAM), or rebuilding your content foundation.</p>
+            </div>
+            <div style="border-left: 3px solid #0051ba; padding-left: 1.5rem;">
+                <h3 style="color: #222; font-size: 1rem; margin-bottom: 0.5rem;">Advisory & Optimization</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">I audit your content, optimize for search + AI, and QA your team's output.</p>
+                <p style="font-size: 0.85rem; color: #999;">Best for: Improving existing content performance, building editorial standards, or adding a quality layer.</p>
+            </div>
+        </div>
+
+        <h2 id="work">Selected Work</h2>
+
+        <div class="case-study">
+            <h3>Rosa Clará — Premium Bridal E-Commerce</h3>
+            <div class="meta">Content Strategy + SEO Optimization</div>
+            
+            <p><strong>The Challenge:</strong> Rosa Clará needed to own high-intent bridal keywords and rank against competitors like Pronovias and Aire Barcelona.</p>
+            
+            <p><strong>What I Did:</strong></p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Audited 10+ competitors to understand the landscape</li>
+                <li>Mapped seasonal search trends and customer journey keywords</li>
+                <li>Wrote 9 strategic category landing pages (v. novia con pedrería, v. novia elegantes, v. novia modernos, etc.)</li>
+                <li>Optimized each for search intent + semantic clustering + conversion</li>
+            </ul>
+
+            <div class="results">
+                <h4>Results:</h4>
+                <ul>
+                    <li>7 pages landed on page 1 of Google</li>
+                    <li>3 pages ranking #1 (beating Pronovias, Aire Barcelona, House of St. Patrick)</li>
+                    <li>21K+ monthly organic visits to pages I wrote</li>
+                    <li>Sustained top rankings 2+ years</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h3>Allianz Spain — B2B Finance & Insurance</h3>
+            <div class="meta">Thought Leadership + AI Search Optimization (AEO/GEO)</div>
+            
+            <p><strong>The Challenge:</strong> Allianz needed credible, authoritative content on finance topics. More importantly: Google's AI Overview was starting to answer finance queries directly—how do you get your content cited?</p>
+            
+            <p><strong>What I Did:</strong></p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Researched what financial questions people actually ask (ITV, renta vitalicia, seguro de vida)</li>
+                <li>Wrote 3 strategic articles optimized for AI discovery</li>
+                <li>Used FAQ structure + semantic clustering to make content "quotable" for Google's AI Overview</li>
+            </ul>
+
+            <div class="results">
+                <h4>Results:</h4>
+                <ul>
+                    <li>"Renta vitalicia inmobiliaria" article ranking #1 organic</li>
+                    <li>"Por qué mi coche no pasa la ITV" cited in Google AI Overview + top organic result</li>
+                    <li>Multiple finance articles regularly featured in Google's AI answers</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h3>Blinkist — Global Content Platform</h3>
+            <div class="meta">Editorial Leadership + Localization + AI Workflow Management</div>
+            
+            <p><strong>The Challenge:</strong> Blinkist serves 30M+ subscribers in 20+ languages. For Spanish (ES/LATAM), they needed editorial leadership that could maintain quality, consistency, and cultural fit across different content creators.</p>
+            
+            <p><strong>What I Did:</strong></p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Edited 100+ Blinks weekly from Spain and LATAM contributors</li>
+                <li>Applied localization strategy (Spain Spanish vs. LATAM Spanish distinctions)</li>
+                <li>Built and tested AI-augmented workflow: AI drafts Blink → I review + edit → publish</li>
+                <li>Maintained <2% error rate while meeting 100% of weekly deadlines</li>
+                <li>Trained other editors on brand voice and quality standards</li>
+            </ul>
+
+            <div class="results">
+                <h4>Results:</h4>
+                <ul>
+                    <li>Consistent editorial quality across async, distributed team</li>
+                    <li>Sustainable AI workflow that maintains human editorial standards</li>
+                    <li>Regional content tailored to Spain and LATAM audiences</li>
+                    <li>Scalable system documented for handoff</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="case-study">
+            <h3>Additional Clients</h3>
+            <div class="meta">Case Studies & Optimization Work</div>
+            
+            <p>I've also worked with <strong>SABA</strong> (parking infrastructure—local SEO ranking #1 for "parkings Barcelona," "parkings Madrid," "parkings Sevilla"), <strong>Intracon</strong> (B2B marketing—page 1 ranking for "video branding"), and many others across industries.</p>
+            
+            <p>Work ranges from category page optimization to blog strategy to knowledge base architecture. The throughline: clarity, strategy, and results you can measure.</p>
+        </div>
+
+        <h2 id="toolkit">Tools & Workflow</h2>
+
+        <div class="toolkit">
+            <h3>My Daily Stack</h3>
+
+            <div class="toolkit-category">
+                <strong>Content Strategy & Research</strong>
+                <p>Semrush (keyword research, competitive analysis, rank tracking), Ahrefs (backlink analysis), Google Search Console (query data), Google Analytics 4 (performance tracking), NotebookLM (research synthesis)</p>
+            </div>
+
+            <div class="toolkit-category">
+                <strong>Writing & Editing</strong>
+                <p>Claude, ChatGPT, Perplexity (research + drafting assistance), Notion (planning + collaboration), WordPress (publishing)</p>
+            </div>
+
+            <div class="toolkit-category">
+                <strong>Operations</strong>
+                <p>Notion (roadmaps, calendars, briefs), Zendesk (customer communication systems), Gmail (team coordination), Slack (async communication)</p>
+            </div>
+
+            <div class="toolkit-category">
+                <strong>AI in My Workflow</strong>
+                <p>I use AI to speed up research, drafting, and synthesis—but I review and edit every piece. AI is a tool that accelerates the parts that should be fast so I can focus on voice, accuracy, and strategy.</p>
+            </div>
+        </div>
+
+        <h2 id="about">About Me</h2>
+
+        <div class="about-text">
+            <p><strong>I'm a journalist and editor by training.</strong> Master's in Publishing (UAB), B.A. in Journalism (Universidad del Zulia), and published literary work. That foundation is why I can take something complex and make it clear without making it wrong.</p>
+
+            <p style="margin-top: 1rem;"><strong>Eight years of bilingual work.</strong> Native Spanish, C1 English. I can tell Spain Spanish from LATAM Spanish and position content accordingly. I've worked across Spain, LATAM, and international audiences.</p>
+
+            <p style="margin-top: 1rem;"><strong>Six years deep in content strategy and SEO.</strong> Started with copywriting (2019), moved into content operations and editorial leadership (2020–present). Most recent work: Blinkist (content leadership), freelance strategy (Rosa Clará, Allianz, others).</p>
+
+            <p style="margin-top: 1rem;"><strong>What ties it together:</strong> I care about the sentence and the system in equal measure. Good writing matters. But sustainable, scalable content production requires process, consistency, and clear ownership. I deliver both.</p>
+
+            <p style="margin-top: 1rem;"><strong>Based in Barcelona.</strong> Fully remote. Happy working async across time zones.</p>
+        </div>
+
+        <h2 style="border: none; margin-top: 3rem; margin-bottom: 0; text-align: center; font-size: 1.3rem; font-weight: 600;">Let's make content that gets cited.</h2>
+
+        <p style="text-align: center; margin: 2rem 0; font-size: 1.05rem;">Open to content strategy, content management, editorial leadership, and customer experience roles.</p>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="mailto:mnca.gov@gmail.com" style="color: #0051ba; text-decoration: none; font-weight: 600; margin-right: 2rem;">Email me</a>
+            <a href="https://www.linkedin.com/in/monicagomezvesga/" style="color: #0051ba; text-decoration: none; font-weight: 600;">LinkedIn</a>
+        </div>
+
+        <div class="footer">
+            <p>© Mónica Gómez Vesga · Barcelona</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Words and strategy by Mónica. This site is also content—static, clear, and optimized for readability.</p>
+        </div>
+    </div>
+</body>
+</html>
